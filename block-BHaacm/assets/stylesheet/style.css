@@ -1,0 +1,382 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Custom CSS */
+
+:root {
+  --text-color: #8d8e92;
+  --ascent: #36b166;
+  --primary: #222946;
+  --background: #e9ecfc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 8px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header */
+.header {
+  background-color: var(--primary);
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.nav-link-active {
+  color: var(--ascent);
+}
+
+/* Hero */
+.hero {
+  background-color: var(--background);
+}
+
+.header-page {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Merriweather", serif;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.section-text,
+.blog-text {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  line-height: 1.4;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--ascent);
+  color: #fff;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+}
+
+/* Blog */
+.header-section,
+.blog-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-family: "Merriweather", serif;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.blog-title {
+  font-size: 2.5rem;
+  text-align: left;
+  text-transform: none;
+}
+
+.blog-text {
+  font-size: 1.25rem;
+}
+
+.btn-secondary {
+  font-size: 1.65rem;
+  padding: 0.75rem 1.25rem;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary);
+  text-align: center;
+}
+
+.footer a,
+.footer {
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+.footer .social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: var(--text-color);
+  border-radius: 4px;
+}
+
+.footer .social-icon {
+  color: var(--primary);
+}
+
+/* Mobile First Layout */
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.padding-2 {
+  padding: 2rem 0;
+}
+
+.padding-3 {
+  padding: 3rem 0;
+}
+
+.gap-1 {
+  gap: 1.5rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-3 {
+  gap: 3rem;
+}
+
+.btn-primary {
+  margin-top: 1rem;
+}
+
+/* Blog */
+.blog-img {
+  order: -1;
+  width: 100%;
+}
+
+/* Desktop View */
+
+@media screen and (min-width: 768px) {
+  /* Typography */
+  html {
+    font-size: 12px;
+  }
+  /* Layout */
+  .col-reverse {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .flex-50 {
+    flex: 1 1 50%;
+  }
+
+  .flex-30 {
+    flex: 1 1 30%;
+  }
+
+  .section-text {
+    line-height: 1.6;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 4rem 0;
+  }
+  .hero-img {
+    order: 2;
+    width: 0;
+    align-self: flex-start;
+    max-width: 100%;
+  }
+
+  /* Blog */
+  .blog {
+    padding: 4rem 0;
+  }
+  .blog-img {
+    height: 200px;
+    /* width: 100%; */
+    object-fit: cover;
+  }
+
+  .blog-item {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .blog-item .btn {
+    margin-top: auto;
+  }
+
+  .blog-item,
+  .blog-content {
+    border: 2px solid red;
+  }
+}
